@@ -4,8 +4,8 @@ import { NavLink } from "react-router"
 export default function Categories() {
     const categories = use(categoryPromise)
   return (
-    <div>
-       <h2 className="font-bold">All Categories {categories.length} </h2>
+    <div >
+       <h2 className="font-bold text-xl">All Categories  </h2>
        <div className="grid gap-2 mt-3">
         {categories.map(category =>
              <NavLink 

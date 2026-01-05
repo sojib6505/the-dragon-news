@@ -16,8 +16,8 @@ export default function NewsCard({ news }) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden "> 
       {/* Author */}
-      <div className="flex items-center justify-between p-4">
-        <div className="flex items-center gap-3">
+      <div className="flex items-center justify-between p-4 bg-base-200 mb-2">
+        <div className="flex items-center gap-3 ">
           <img
             src={author?.img}
             alt={author?.name}
