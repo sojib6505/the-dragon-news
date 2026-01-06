@@ -24,7 +24,7 @@ export default function Navbar() {
         <NavLink to='/career'>Career</NavLink>
       </div>
       <div className="flex items-center gap-2">
-        {user.photoURL? <img className="w-12 rounded-full " src={user.photoURL} alt="" />: <img src={userImg} alt="" />}
+        {user?.photoURL? <img className="w-12 rounded-full " src={user.photoURL} alt="" />: <img src={userImg} alt="" />}
         {user ? <button onClick={handleLogOut} className="btn bg-primary text-base-100 px-5 ">LogOut</button> : <Link to='/auth/login' className="btn bg-primary text-base-100 px-5 ">Login</Link>}
       </div>
     </div>

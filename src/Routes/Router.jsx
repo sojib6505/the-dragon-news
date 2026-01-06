@@ -7,6 +7,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ProductDetails from "../Pages/ProductDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
+import ErrorPage from "../Components/Error";
 
 const router = createBrowserRouter([
     {
@@ -16,22 +17,24 @@ const router = createBrowserRouter([
             {
                 path: '/category/:id',
                 element: <CategoryNews />,
-                loader: () => fetch('/news.json')
+                loader: () => fetch('/news.json'),
+                 errorElement:<ErrorPage/>
             }
         ]
     },
     {
         path: '/auth', element: <AuthenticationLayout />,
         children: [
-            { path:'/auth/login', element: <Login></Login> },
-            {path:'/auth/register', element:<Register></Register>}
+            { path: '/auth/login', element: <Login></Login> },
+            { path: '/auth/register', element: <Register></Register> }
         ]
     },
     {
-        path:'details/:id',
-        element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader:()=>  fetch('/news.json')
+        path: 'details/:id',
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader: () => fetch('/news.json'),
+        errorElement:<ErrorPage/>
     },
-    { path: '/*', element: <div>Error 404</div> }
+    { path: '/*', element: <ErrorPage/> }
 ])
 export default router;
