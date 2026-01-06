@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function Register() {
-    const {createUser} = use(AuthContext)
+    const {createUser,updateUsers} = use(AuthContext)
     const [error ,setError] = useState('')
     const navigate = useNavigate()
     const handleRegister = (e) => {
@@ -15,8 +15,15 @@ export default function Register() {
        const password = form.password.value;
         createUser(email,password)
         .then((result) => {
-            console.log(result)
-            navigate('/')
+            updateUsers({displayName:name,photoURL:photo})
+            .then(() =>{
+                 // Profile updated!
+                  navigate('/')
+            })
+            .catch((error) => {
+                //An error occurred
+            })
+           
         })
         .catch((error)=>{
             setError( error.message)
