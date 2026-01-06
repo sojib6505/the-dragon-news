@@ -5,6 +5,8 @@ import CategoryNews from "../Pages/CategoryNews";
 import AuthenticationLayout from "../Layouts/AuthenticationLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ProductDetails from "../Pages/ProductDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +26,11 @@ const router = createBrowserRouter([
             { path:'/auth/login', element: <Login></Login> },
             {path:'/auth/register', element:<Register></Register>}
         ]
+    },
+    {
+        path:'details/:id',
+        element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader:()=>  fetch('/news.json')
     },
     { path: '/*', element: <div>Error 404</div> }
 ])
