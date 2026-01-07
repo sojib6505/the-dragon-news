@@ -67,7 +67,7 @@ This project was built to:
 ## 👨‍💻 Author
 **Sojib Islam**  
 Frontend Web Developer  
-📧 Email: sojib6505@gmail.com
+📧 Email: sojibislam6505@gmail.com
 
 ---
 
