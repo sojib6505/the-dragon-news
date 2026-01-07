@@ -1,7 +1,7 @@
 
 
 import { FaStar, FaEye, FaRegBookmark, FaShareAlt } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function NewsCard({ news }) {
   const {
@@ -13,6 +13,14 @@ export default function NewsCard({ news }) {
     total_view,
     tags,
   } = news;
+  const navigate = useNavigate()
+  const handleReadMore = ()=> {
+       navigate(`/details/${news.id}`);
+          window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden "> 
@@ -55,9 +63,9 @@ export default function NewsCard({ news }) {
       {/* Details */}
       <p className="px-4 text-sm text-gray-600">
         {details.slice(0, 160)}...
-        <Link to={`/details/${news.id}`} className="text-red-500 font-semibold cursor-pointer ml-1">
+        <span onClick={handleReadMore} className="text-red-500 font-semibold cursor-pointer ml-1">
           Read More
-        </Link>
+        </span>
       </p>
 
       {/* Tags */}

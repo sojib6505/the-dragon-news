@@ -6,9 +6,9 @@ import { useEffect, useState } from "react";
 export default function ProductDetails() {
     const {id} = useParams()
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     const [findData,setFindData] = useState('')
-    console.log(findData)
+    // console.log(findData)
     useEffect(()=>{
         const findNews = data.find(news => news.id == id)
         setFindData(findNews)

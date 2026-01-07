@@ -25,7 +25,7 @@ export default function Login() {
         .catch((error)=>{
             setError(error.message)
         })
-        console.log(email,password)
+        // console.log(email,password)
     }
     const handleReset = () => {
         const email = emailRef.current.value;

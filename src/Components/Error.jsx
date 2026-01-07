@@ -1,5 +1,5 @@
 import { useNavigate, useRouteError } from "react-router";
-import { FaFacebook, FaTwitter, FaInstagram, FaHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 export default function ErrorPage() {
   const navigate = useNavigate()
@@ -7,7 +7,7 @@ export default function ErrorPage() {
   const handleGoHome = () => {
     navigate('/')
   }
-  console.log(error)
+  // console.log(error)
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-100 p-4">
       <h1 className="text-4xl font-bold text-red-600 mb-4">Oops!</h1>

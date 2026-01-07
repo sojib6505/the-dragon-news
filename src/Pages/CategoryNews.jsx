@@ -22,7 +22,7 @@ export default function CategoryNews() {
             setCategory(filterdata)
         }
     }, [id, data])
-    console.log(category)
+    // console.log(category)
     return (
         <div className="grid gap-5">
           {category.map(news => <NewsCard key={news.id} news={news}></NewsCard>)}
