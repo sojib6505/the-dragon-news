@@ -9,8 +9,8 @@ export default function LatestNews({}) {
    if (newsLoading) return <span className="loading loading-spinner loading-xl"></span>;
   return (
     <div className='flex gap-5 items-center bg-base-300 p-2'>
-        <p className='text-base-100 bg-secondary  p-2'>Latest</p>
-            <Marquee pauseOnHover={true} speed={50}  className='font-bold flex gap-5'>
+        <p className='text-base-100 bg-secondary p-1  md:p-2'>Latest</p>
+            <Marquee pauseOnHover={true} speed={50}  className='font-semibold md:font-bold flex gap-5'>
              {data.map(latestNews => <BreakingNews latestNews={latestNews}></BreakingNews> )}
         </Marquee>
     </div>

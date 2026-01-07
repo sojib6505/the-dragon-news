@@ -39,7 +39,7 @@ export default function Login() {
     }
 
     return (
-        <div className="flex justify-center min-h-screen items-center">
+        <div className="flex justify-center m-2 md:m-0 md:min-h-screen items-center">
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-12 px-8">
                 <h2 className="font-bold text-2xl text-center">Login your account</h2>
                 <div className="divider"></div>

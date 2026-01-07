@@ -10,21 +10,21 @@ export default function HomeLayout() {
     <div>
       <header>
         <Header></Header>
-        <section className='w-11/12 mx-auto py-2 flex'>
+        <section className='w-11/12 mx-auto py-2 '>
          <LatestNews/>
         </section>
         <nav className='w-11/12 mx-auto py-2'>
           <Navbar />
         </nav>
       </header>
-      <main className='w-11/12 mx-auto py-2  grid grid-cols-12 gap-5'>
-        <aside className='col-span-3 sticky top-0 h-fit'>
+      <main className='w-11/12 mx-auto  md:py-8  grid md:grid-cols-12 gap-5'>
+        <aside className='md:col-span-3 sticky top-0 h-fit'>
           <LeftAside />
         </aside>
-        <section className='col-span-6'>
+        <section className='md:col-span-6'>
           <Outlet></Outlet>
         </section>
-        <aside className={`col-span-3  sticky top-0 h-fit`}>
+        <aside className={`md:col-span-3  sticky top-0 h-fit`}>
           <RightAside />
         </aside>
       </main>

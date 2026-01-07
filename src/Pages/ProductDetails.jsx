@@ -17,8 +17,8 @@ export default function ProductDetails() {
   return (
     <div className="space-y-5">
         <Header/>
-        <div className="w-11/12 mx-auto grid grid-cols-12 gap-5">
-            <div className="col-span-9 space-y-5">
+        <div className="w-11/12 mx-auto grid md:grid-cols-12 gap-5">
+            <div className="md:col-span-9 space-y-5">
                <div className="p-4 border border-base-200">
                 <img className="w-full" src={findData.thumbnail_url} alt="" />
                </div>
@@ -28,7 +28,7 @@ export default function ProductDetails() {
                  All news in this category
                </Link>
             </div>
-            <div className="col-span-3">
+            <div className="md:col-span-3">
                 <RightAside/>
             </div>
         </div>
