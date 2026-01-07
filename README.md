@@ -49,8 +49,8 @@ The application focuses on a clean, responsive UI and smooth user experience.
 ![Login](screenshots/dragon-news-3.png)
 ![Register](screenshots/dragon-news-4.png)
 ### Mobile Device Page
-![Mobile Home Page](screenshots/dragon-news-5.jpg)
-![Mobile Detail Page](screenshots/dragon-news-6.jpg)
+![Mobile Home Page](screenshots/mobile-dragon-news-1.png)
+![Mobile Detail Page](screenshots/mobile.dragon-news-2.png)
 
 ---
 
