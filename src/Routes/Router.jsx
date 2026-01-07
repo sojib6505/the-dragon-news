@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import ProductDetails from "../Pages/ProductDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ErrorPage from "../Components/Error";
+import Loading from "../Components/Loading";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
                 path: '/category/:id',
                 element: <CategoryNews />,
                 loader: () => fetch('/news.json'),
+                hydrateFallbackElement:<Loading></Loading>,
                  errorElement:<ErrorPage/>
             }
         ]
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
         path: 'details/:id',
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         loader: () => fetch('/news.json'),
+          hydrateFallbackElement:<Loading></Loading>,
         errorElement:<ErrorPage/>
     },
     { path: '/*', element: <ErrorPage/> }

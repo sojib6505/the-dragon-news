@@ -1,13 +1,13 @@
 import { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
-import { FaEye,FaEyeSlash  } from "react-icons/fa"
+import { FaEye, FaEyeSlash } from "react-icons/fa"
 
 export default function Register() {
     const { createUser, updateUsers, emailVerification } = use(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
-    const [show,setShow] = useState(true)
+    const [show, setShow] = useState(true)
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -26,7 +26,8 @@ export default function Register() {
                 return emailVerification();
             })
             .then(() => {
-                alert("Email verification sent. Please check your email.");
+                alert("Email verification sent. Please check your inbox, " + "If you don’t see it check your Spam or Promotions folder"
+                );
                 navigate("/");
             })
             .catch((error) => {
